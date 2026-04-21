@@ -1,11 +1,9 @@
 CREATE Table courses(id int PRIMARY KEY,name VARCHAR(20));
 
-CREATE Table enrollments(student_id int,course_id int,grade int,
-Foreign Key (student_id) REFERENCES student(id),
-Foreign Key (course_id) REFERENCES courses(id));
+CREATE Table enrollments(student_id int,course_id int,grade VARCHAR(5));
 
-CREATE Table Student(
-    id int PRIMARY KEY AUTO_INCREMENT,
+CREATE Table students(
+    id int PRIMARY KEY,
     Name VARCHAR(20),
     Gender VARCHAR(10),
     Age INT,
