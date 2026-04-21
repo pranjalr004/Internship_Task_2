@@ -1,32 +1,36 @@
 -- Active: 1775625578002@@127.0.0.2@3306@studentmanagement
 -- Courses Table
-INSERT INTO courses (id, name) VALUES (1, 'Mathematics');
-INSERT INTO courses (id, name) VALUES (2, 'Physics');
-INSERT INTO courses (id, name) VALUES (3, 'Chemistry');
-INSERT INTO courses (id, name) VALUES (4, 'Computer Science');
-INSERT INTO courses (id, name) VALUES (5, 'English');
+INSERT INTO courses VALUES
+(101,'Mathematics'),
+(102,'Science'),
+(103,'English');
 
+SELECT * FROM courses;
 -- Enrollment Table
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (101, 1, 'A');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (102, 2, 'B');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (103, 3, 'A');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (104, 4, 'C');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (105, 5, 'B');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (101, 2, 'A');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (102, 3, 'B');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (103, 4, 'A');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (104, 5, 'C');
-INSERT INTO enrollments (student_id, course_id, grade) VALUES (105, 1, 'B');
+INSERT INTO enrollments VALUES
+(1,101,85),(1,102,88),(1,103,82),
+(2,101,75),(2,102,70),(2,103,78),
+(3,101,90),(3,102,92),(3,103,89),
+(4,101,88),(4,102,85),(4,103,91),
+(5,101,72),(5,102,74),(5,103,70),
+(6,101,35),(6,102,60),(6,103,38),
+(7,101,91),(7,102,89),(7,103,93),
+(8,101,78),(8,102,76),(8,103,80),
+(9,101,87),(9,102,90),(9,103,86),
+(10,101,30),(10,102,65),(10,103,35);
 
-INSERT INTO students (id, Name, Gender, Age, Grade, MathScore, ScienceScore, EnglishScore)
-VALUES 
-(1, 'Pranjal', 'Male', 20, 'A', 85, 88, 82),
-(2, 'Aryan', 'Male', 21, 'B', 75, 70, 78),
-(3, 'Kunal', 'Male', 20, 'A', 90, 92, 89),
-(4, 'Anjali', 'Female', 19, 'A', 88, 85, 91),
-(5, 'Sneha', 'Female', 22, 'B', 72, 74, 70),
-(6, 'Rahul', 'Male', 21, 'C', 65, 60, 68),
-(7, 'Pooja', 'Female', 20, 'A', 91, 89, 93),
-(8, 'Vikas', 'Male', 23, 'B', 78, 76, 80),
-(9, 'Neha', 'Female', 19, 'A', 87, 90, 86),
-(10, 'Amit', 'Male', 22, 'C', 60, 65, 62);
+SELECT * FROM enrollments;
+
+INSERT INTO students VALUES
+(1,'Pranjal','Male',20,'A',85,88,82),
+(2,'Aryan','Male',21,'B',75,70,78),
+(3,'Kunal','Male',20,'A',90,92,89),
+(4,'Anjali','Female',19,'A',88,85,91),
+(5,'Sneha','Female',22,'B',72,74,70),
+(6,'Rahul','Male',21,'C',65,60,68),
+(7,'Pooja','Female',20,'A',91,89,93),
+(8,'Vikas','Male',23,'B',78,76,80),
+(9,'Neha','Female',19,'A',87,90,86),
+(10,'Amit','Male',22,'C',60,65,62);
+
+SELECT * FROM students;
